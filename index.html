@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css">
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/app.css">
+        <title>VueJS Learning</title>
+    </head>
+    <body>
+        <header class="header row">
+            <nav class="navbar col col-9" id="top-navbar">
+                <span class="navbar-brand mb-0 h1" id="header-logo">VueJS Learning</span>
+            </nav>
+            <form class="form-inline col col-3">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-primary my-2 my-sm-0">Search</button>
+            </form>
+        </header>
+        <div id="app-cep-search" class="cep-search-div row">
+            <form class="col col-4">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Tap your CEP" v-model="cep">
+                </div>
+                <div class="form-group">
+                    <address>
+                        <span class="street">{{ street }}</span><br>
+                        <span class="district">{{ district }}</span><br>
+                        <span class="city">{{ city }}</span> <span class="state">{{ state }}</span>
+                    </address>
+                </div>
+            </form>
+        </div>
+        <script src="assets/js/jquery-3.3.1.min.js"></script>
+        <script src="assets/js/popper.min.js"></script>
+        <script src="assets/js/axios.min.js"></script>
+        <script src="assets/js/lodash.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+        <script src="assets/js/cep-search.js"></script>
+    </body>
+</html>
